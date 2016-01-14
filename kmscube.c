@@ -367,6 +367,9 @@ static int init_gl(void)
 	eglMakeCurrent(gl.display, gl.surface, gl.surface, gl.context);
 
 
+	printf("GL Version \"%s\"\n", glGetString(GL_VERSION));
+	printf("GL Renderer \"%s\"\n", glGetString(GL_RENDERER));
+
 	vertex_shader = glCreateShader(GL_VERTEX_SHADER);
 
 	glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
